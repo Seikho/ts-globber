@@ -10,7 +10,6 @@
     ],
     "files": [
         "./index.ts",
-        "./src/index.ts",
         "./typings/glob/glob.d.ts",
         "./typings/minimatch/minimatch.d.ts",
         "./typings/node/node.d.ts"
