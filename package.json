@@ -1,0 +1,30 @@
+{
+  "name": "ts-globber",
+  "version": "0.1.0",
+  "description": "Update the files property of tsconfig.json",
+  "main": "index.js",
+  "dependencies": {
+    "glob": "^5.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seikho/ts-globber.git"
+  },
+  "keywords": [
+    "tsconfig.json",
+    "files",
+    "glob",
+    "filesglob",
+    "update"
+  ],
+  "author": "Carl Winkler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seikho/ts-globber/issues"
+  },
+  "homepage": "https://github.com/seikho/ts-globber"
+}
