@@ -8,7 +8,7 @@ function applyChanges() {
 	var newConfig = JSON.stringify(this.tsconfig, null, 4);
 	
 	// Replace the existing tsconfig.json file
-	fs.writeFile(this.location, newConfig, (err) => {
+	fs.writeFile(this.tsconfigLocation, newConfig, (err) => {
 		if (err) console.log("Failed to update tsconfig.json");
 		else console.log("Successfully updated tsconfig.json");
 	});

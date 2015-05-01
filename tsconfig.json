@@ -14,7 +14,6 @@
         "./src/parseGlob.ts",
         "./src/readConfig.ts",
         "./src/setLocation.ts",
-        "./src/test.ts",
         "./test/index.ts",
         "./typings/chai/chai.d.ts",
         "./typings/glob/glob.d.ts",

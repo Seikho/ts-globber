@@ -19,7 +19,6 @@ function updateTsconfig(tsconfigFile?: string) {
 		console.log("Failed to update tsconfig.json: Could not set location");
 		return;
 	}
-	console.log(this.tsconfigLocation);
 	
 	fs.readFile(this.tsconfigLocation, "utf-8", readConfig);
 }
