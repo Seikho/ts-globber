@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/seikho/ts-globber/issues"
   },
-  "homepage": "https://github.com/seikho/ts-globber"
+  "homepage": "https://github.com/seikho/ts-globber",
+  "preferGlobal": true,
+  "bin": {
+    "ts-globber": "bin/index.js"
+  }
 }
