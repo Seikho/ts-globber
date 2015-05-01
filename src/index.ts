@@ -7,7 +7,7 @@ var args = process.argv.slice(2);
 // If no argument is provided, assume we're updated the tsconfig.json in the CWD.
 if (args.length === 0) args[0] = "tsconfig.json";
 
-var location = args[0];
+var location = path.resolve(args.join(" "));
 var files: string[] = [];
 var returnCount = 0;
 var globCount = 0;
