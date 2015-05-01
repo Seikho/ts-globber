@@ -1,6 +1,7 @@
 var glob = require("glob");
 var fs = require("fs");
 var args = process.argv.slice(2);
+console.log(args);
 var location = args[0];
 var files = [];
 var returnCount = 0;
@@ -8,6 +9,7 @@ var globCount = 0;
 var tsconfig;
 updateTsconfig();
 function updateTsconfig() {
+    return;
     if (location.indexOf("tsconfig.json") === -1)
         return;
     fs.readFile(location, "utf-8", readTsconfig);

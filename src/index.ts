@@ -4,6 +4,9 @@ import path = require("path");
 
 var args = process.argv.slice(2);
 
+// If no argument is provided, assume we're updated the tsconfig.json in the CWD.
+if (args.length === 0) args[0] = "tsconfig.json";
+
 var location = args[0];
 var files: string[] = [];
 var returnCount = 0;
@@ -21,6 +24,7 @@ function readTsconfig(error, file: string) {
 	tsconfig = JSON.parse(file);
 	var tsGlob: string[] = tsconfig["filesGlob"];
 	
+	// If there isn't a filesGlob property, don't continue.
 	if (!tsGlob) return;
 	
 	globCount = tsGlob.length;
@@ -29,13 +33,20 @@ function readTsconfig(error, file: string) {
 }
 
 function parseGlob(err, matches: string[]) {
+	// Add the 'matches' to our file list
 	files = files.concat(matches);
+	
+	// Once we have all of our results, apply the changes.
 	if (++returnCount === globCount) applyChanges();
 }
 
 function applyChanges() {
 	tsconfig["files"] = files;
+	
+	// Compose the new tsconfig.json file
 	var newConfig = JSON.stringify(tsconfig, null, 4);
+	
+	// Replace the existing tsconfig.json file
 	fs.writeFile(location, newConfig, (err) => {
 		if (err) console.log("Failed to update tsconfig.json");
 		else console.log("Successfully updated tsconfig.json");
