@@ -1,6 +1,6 @@
 {
   "name": "ts-globber",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Update the files property of tsconfig.json",
   "main": "index.js",
   "dependencies": {
