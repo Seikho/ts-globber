@@ -4,11 +4,13 @@
   "description": "Update the files property of tsconfig.json",
   "main": "index.js",
   "dependencies": {
-    "glob": "^5.0.5"
+    "chai": "^2.3.0",
+    "glob": "^5.0.5",
+    "mocha": "^2.2.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node src/index.js"
   },
   "repository": {
