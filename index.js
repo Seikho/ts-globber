@@ -1,10 +1,6 @@
 var fs = require("fs");
-var path = require("path");
 var setLocation = require("./src/setLocation");
 var readConfig = require("./src/readConfig");
-var executedFile = path.resolve(process.argv[1]);
-if (executedFile === __filename)
-    updateTsconfig();
 function updateTsconfig(tsconfigFile) {
     this.tsconfigLocation = "";
     this.files = [];

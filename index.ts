@@ -5,9 +5,6 @@ import setLocation = require("./src/setLocation");
 import readConfig = require("./src/readConfig");
 export = updateTsconfig;
 
-var executedFile = path.resolve(process.argv[1]);
-if (executedFile === __filename) updateTsconfig(); 
-
 function updateTsconfig(tsconfigFile?: string) {
 	this.tsconfigLocation = "";
 	this.files = [];
