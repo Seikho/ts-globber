@@ -1,21 +1,21 @@
 var fs = require("fs");
 var path = require("path");
+var setLocation = require("./src/setLocation");
 var readConfig = require("./src/readConfig");
-var args = process.argv.slice(2);
-// If no argument is provided, assume we're updated the tsconfig.json in the CWD.
-if (args.length === 0)
-    args[0] = "tsconfig.json";
-var location;
-var files = [];
-var returnCount = 0;
-var globCount = 0;
-var tsconfig;
-if (args.length > 0)
+var executedFile = path.resolve(process.argv[1]);
+if (executedFile === __filename)
     updateTsconfig();
 function updateTsconfig(tsconfigFile) {
-    location = path.resolve(tsconfigFile || args.join(" "));
-    if (location.indexOf("tsconfig.json") === -1)
+    this.tsconfigLocation = "";
+    this.files = [];
+    this.returnCount = 0;
+    this.globCount = 0;
+    this.tsconfig = "";
+    if (!setLocation(tsconfigFile || null)) {
+        console.log("Failed to update tsconfig.json: Could not set location");
         return;
-    fs.readFile(location, "utf-8", readConfig);
+    }
+    console.log(this.tsconfigLocation);
+    fs.readFile(this.tsconfigLocation, "utf-8", readConfig);
 }
 module.exports = updateTsconfig;
