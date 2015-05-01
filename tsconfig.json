@@ -1,9 +1,18 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es5",
-		"outDir": "./",
-		"sourceMap": false
-	},
-	"filesGlob": ["./**/*.ts"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "./",
+        "sourceMap": false
+    },
+    "filesGlob": [
+        "./**/*.ts"
+    ],
+    "files": [
+        "./index.ts",
+        "./src/index.ts",
+        "./typings/glob/glob.d.ts",
+        "./typings/minimatch/minimatch.d.ts",
+        "./typings/node/node.d.ts"
+    ]
 }
