@@ -4,10 +4,10 @@ Re-propagate the 'files' property of your tsconfig.json.
 #### Installation
 ```
 // As a cli-tool
-npm install -g https://github.com/seikho/ts-globber.git
+npm install -g ts-globber
 
 // As a node module
-npm install https://github.com/seikho/ts-globber.git --save
+npm install ts-globber --save
 ```
 
 #### Example Usage
