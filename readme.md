@@ -13,6 +13,18 @@ npm install ts-globber --save
 ```
 
 #### Example Usage
+Use it in your Visual Studio Code build task:
+```javascript
+{
+	"version": "0.1.0",
+	"command": "tsglob && tsc",
+	"isShellCommand": true,
+	"showOutput": "silent",
+	"problemMatcher": "$tsc"
+}
+
+```
+
 ```
 // CLI
 cd ~/projects/myTsProject
