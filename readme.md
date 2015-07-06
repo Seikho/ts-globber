@@ -33,5 +33,5 @@ tsglob
 
 // Module
 var tsglobber = require("ts-globber");
-ts-globber();
+tsglobber();
 ```
