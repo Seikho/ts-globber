@@ -17,7 +17,8 @@ Use it in your Visual Studio Code build task:
 ```javascript
 {
 	"version": "0.1.0",
-	"command": "tsglob && tsc",
+	"command": "tsglob",
+    "args": ["&&","tsc"],
 	"isShellCommand": true,
 	"showOutput": "silent",
 	"problemMatcher": "$tsc"
@@ -31,7 +32,10 @@ cd ~/projects/myTsProject
 tsglob
 
 
-// Module
+// Module -- in code
 var tsglobber = require("ts-globber");
 tsglobber();
+
+// Module -- command line
+node node_modules/ts-globber/bin/index.js
 ```
