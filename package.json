@@ -6,7 +6,7 @@
   "dependencies": {
     "glob": "^5.0.5"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "chai": "^2.3.0",
     "mocha": "^2.2.4"
   },
