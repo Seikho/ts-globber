@@ -1,18 +1,19 @@
 {
   "name": "ts-globber",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Update the files property of tsconfig.json",
   "main": "index.js",
   "dependencies": {
     "glob": "^5.0.5"
   },
-  "devDependencies": {
+  "devDependencies": {    
     "chai": "^2.3.0",
     "mocha": "^2.2.4"
   },
   "scripts": {
     "test": "mocha",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
