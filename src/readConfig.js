@@ -12,4 +12,14 @@ function readTsconfig(error, file) {
     for (var g in tsGlob)
         glob(tsGlob[g], parseGlob);
 }
+function tryParse(file) {
+    try {
+        return JSON.parse(file.trim());
+    }
+    catch (ex) {
+        console.log("Failed to parse tsconfig.json as JSON");
+        console.log(ex.message.toString());
+        throw new Error("Failed to parse tsconfig.json as JSON");
+    }
+}
 module.exports = readTsconfig;
