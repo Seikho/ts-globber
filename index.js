@@ -42,9 +42,6 @@ function readConfig(location) {
         tsObj.module = globModule;
         for (var g in tsGlob) {
             var globLocation = path.join(globModule, tsGlob[g]);
-            console.log(process.cwd());
-            console.log(globLocation);
-            console.log("------");
             glob(globLocation, function (err, matches) { return parseGlob(err, matches, tsObj); });
         }
     });
