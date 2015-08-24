@@ -9,16 +9,13 @@
         "./**/*.ts"
     ],
     "files": [
-        "./index.ts",
-        "./src/applyChanges.ts",
-        "./src/parseGlob.ts",
-        "./src/readConfig.ts",
-        "./src/setLocation.ts",
-        "./test/index.ts",
-        "./typings/chai/chai.d.ts",
-        "./typings/glob/glob.d.ts",
-        "./typings/minimatch/minimatch.d.ts",
-        "./typings/mocha/mocha.d.ts",
-        "./typings/node/node.d.ts"
+        "index.ts",
+        "recurse.ts",
+        "test/index.ts",
+        "typings/chai/chai.d.ts",
+        "typings/glob/glob.d.ts",
+        "typings/minimatch/minimatch.d.ts",
+        "typings/mocha/mocha.d.ts",
+        "typings/node/node.d.ts"
     ]
 }
