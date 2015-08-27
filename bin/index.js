@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var update = require("../index");
-var recurse = require("../recurse");
+var update = require("../src/index");
+var recurse = require("../src/recurse");
 
 if (process.argv.length > 2) {
 	var args = process.argv.slice(2);

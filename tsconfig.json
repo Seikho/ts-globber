@@ -5,7 +5,18 @@
         "outDir": "./",
         "sourceMap": false
     },
-    "exclude": [
-        "node_modules/"
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./test/**/*.ts"
+    ],
+    "files": [
+        "test/index.ts",
+        "src/index.ts",
+        "src/recurse.ts",
+        "src/typings/chai/chai.d.ts",
+        "src/typings/glob/glob.d.ts",
+        "src/typings/minimatch/minimatch.d.ts",
+        "src/typings/mocha/mocha.d.ts",
+        "src/typings/node/node.d.ts"
     ]
 }
